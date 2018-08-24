@@ -7,5 +7,10 @@
         <h3>by {{book.author}} - Rating: {{book.rating}}</h3>
         <p>{{book.description}}</p>
         <a href="/book-list">Go back Home</a>
+        <br>
+        <br>
+        <a href="/book/delete/{{book._id}}">
+            <button class='btn-delete'>I hate this book</button>
+        </a>
     </div>
 </div>

@@ -23,6 +23,14 @@ router.get('/book/:id', (req, res) => {
         .catch(console.error)
 })
 
+router.get('/book/delete/:id', (req, res) => {
+    Book.findByIdAndRemove(req.params.id)
+        .then(result => {
+            res.redirect('/book-list')
+        })
+        .catch(console.error)
+})
+
 router.get('/create-book', (req, res) => {
     res.render('create-book')
 })
