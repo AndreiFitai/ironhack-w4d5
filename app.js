@@ -12,7 +12,7 @@ const path = require('path')
 mongoose.Promise = Promise
 mongoose
     .connect(
-        'mongodb://localhost/awesome-project',
+        process.env.MONGODB_URI || 'mongodb://localhost/awesome-project',
         { useMongoClient: true }
     )
     .then(() => {
