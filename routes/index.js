@@ -10,7 +10,6 @@ router.get('/', (req, res, next) => {
 router.get('/book-list', (req, res, next) => {
     Book.find({})
         .then(books => {
-            console.log(books)
             res.render('book-list', { books })
         })
         .catch(console.error)
