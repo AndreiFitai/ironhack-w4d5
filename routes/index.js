@@ -15,4 +15,12 @@ router.get('/book-list', (req, res, next) => {
         .catch(console.error)
 })
 
+router.get('/book/:id', (req, res, next) => {
+    Book.findById(req.params.id)
+        .then(book => {
+            res.render('book-details', { book })
+        })
+        .catch(console.error)
+})
+
 module.exports = router
