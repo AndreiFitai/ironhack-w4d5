@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="card">
+        <div class="list-flex">
+            <h1>Look at all my students</h1>
+        </div>
+        <ul>
+            {{#each students}}
+
+            <li><a href="/student/details/{{this._id}}">{{this.name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

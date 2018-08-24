@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const Book = require('../models/Book')
+const Student = require('../models/Student')
 
-/* GET home page */
 router.get('/', (req, res) => {
     res.render('index')
 })
@@ -78,6 +78,21 @@ router.post('/update-book/:id', (req, res) => {
     ).then(book => {
         res.render('book-details', { book, updated: true })
     })
+})
+
+router.get('/student/list', (req, res) => {
+    Student.find({}).then(students => {
+        res.render('students', { students })
+    })
+})
+
+router.get('/student/details/:id', (req, res) => {
+    Student.findById(req.params.id)
+        .populate('books')
+        .then(student => {
+            res.render('student-details', { student })
+        })
+        .catch(console.error)
 })
 
 module.exports = router

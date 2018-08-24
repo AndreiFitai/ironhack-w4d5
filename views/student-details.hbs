@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="card">
+        <h1>{{student.name}}</h1>
+        <h3>Here are my favorite books:</h3>
+        <ul>
+            {{#each student.books}}
+            <li>
+                <a href="/book/{{this.id}}">{{this.title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
