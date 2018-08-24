@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 16px 'Montserrat', Helvetica, Arial, sans-serif;
+  background: linear-gradient(265.11deg, #bb8ba9 -22.58%, #fff06a 215.45%);
+  min-height: 100vh; }
+
+.container {
+  padding: 25px calc((100% - 960px) / 2); }
+
+.card {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); }
+
+a {
+  color: #00b7ff; }
+
+/*# sourceMappingURL=style.css.map */
