@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card">
+        <h1>Update your favorite book</h1>
+        <form action="/update-book/{{book._id}}" method='POST'>
+            <label for="title">Title</label>
+            <input type="text" id='title' name='title' required="true" value="{{book.title}}">
+            <br>
+            <label for="Author">Author</label>
+            <input type="text" id='author' name='author' required="true" value="{{book.author}}">
+            <br>
+            <label for="description">Description</label>
+            <textarea type="text" id='description' name='description' required="true">{{book.description}}</textarea>
+            <br>
+            <label for="rating">Rating</label>
+            <input type="number" min="0" max="10" id='rating' name='rating' required="true" value="{{book.rating}}">
+            <br>
+            <a href="/book/{{book._id}}"><button>Cancel</button></a>
+            &nbsp; &nbsp; &nbsp;
+            <button type='submit' class='go-btn'>Save!</button>
+        </form>
+    </div>
+</div>

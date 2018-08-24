@@ -34,6 +34,7 @@ button {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
+  min-width: 100px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   transition: 200ms all ease-in-out;
   transform-origin: 50% 50%; }
@@ -58,8 +59,7 @@ textarea {
   padding: 5px 10px; }
 
 .go-btn {
-  margin-top: 50px;
-  width: 200px; }
+  margin-top: 50px; }
 
 .btn-delete {
   background-color: red; }

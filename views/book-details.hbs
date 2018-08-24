@@ -2,15 +2,19 @@
     <div class="card">
         {{#if new}}
         <h3>Your book has been added to the list!</h3>
+        {{/if}} {{#if updated}}
+        <h3>Your book has been updated!</h3>
         {{/if}}
         <h1>{{book.title}}</h1>
         <h3>by {{book.author}} - Rating: {{book.rating}}</h3>
         <p>{{book.description}}</p>
-        <a href="/book-list">Go back Home</a>
-        <br>
-        <br>
+        <a href="/book-list"><button>See all the Books</button></a>
+        &nbsp; &nbsp; &nbsp;
+        <a href="/update-book/{{book._id}}"><button>Update this book</button>
+        </a>
+        &nbsp; &nbsp; &nbsp;
         <a href="/book/delete/{{book._id}}">
-            <button class='btn-delete'>I hate this book</button>
+            <button class='btn-delete'>I hate this book, delete it!</button>
         </a>
     </div>
 </div>

@@ -52,4 +52,32 @@ router.post('/create-book', (req, res) => {
         })
 })
 
+router.get('/update-book/:id', (req, res) => {
+    const { id } = req.params
+    Book.findById(id).then(book => {
+        res.render('update-book', { book })
+    })
+})
+
+router.post('/update-book/:id', (req, res) => {
+    const { id } = req.params
+
+    const {
+        title, author, rating, description,
+    } = req.body
+
+    Book.findByIdAndUpdate(
+        id,
+        {
+            title,
+            author,
+            rating,
+            description,
+        },
+        { new: true }
+    ).then(book => {
+        res.render('book-details', { book, updated: true })
+    })
+})
+
 module.exports = router
