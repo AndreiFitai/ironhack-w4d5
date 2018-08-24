@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card">
+        <form action="/create-book" method='POST'>
+            <label for="title">Title</label>
+            <input type="text" id='title' name='title' required="true">
+            <br>
+            <label for="Author">Author</label>
+            <input type="text" id='author' name='author' required="true">
+            <br>
+            <label for="description">Description</label>
+            <textarea type="text" id='description' name='description' required="true"></textarea>
+            <br>
+            <label for="rating">Rating</label>
+            <input type="number" min="0" max="10" id='rating' name='rating' required="true">
+            <br>
+            <button type='submit' class='go-btn'>Go!</button>
+        </form>
+    </div>
+</div>

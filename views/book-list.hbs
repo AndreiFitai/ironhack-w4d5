@@ -1,6 +1,9 @@
 <div class="container">
     <div class="card">
-        <h1>Look at all my books</h1>
+        <div class="list-flex">
+            <h1>Look at all my books</h1>
+            <a href="/create-book"><button>Add a book to the list</button></a>
+        </div>
         <ul>
             {{#each books}} {{> book_list_item this}} {{/each}}
         </ul>
